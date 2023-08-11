@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import seaborn as sn
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.preprocessing import OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.ensemble import RandomForestClassifier
@@ -31,7 +30,6 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.4, random_
 preprocessor = ColumnTransformer(transformers=[
     ("title", TfidfVectorizer(stop_words=["english"], ngram_range=(1, 1)), "title"),
     ("text", TfidfVectorizer(stop_words=["english"], ngram_range=(1, 1), min_df=0.01, max_df=0.95), "text"),
-    # ("subject", OneHotEncoder(handle_unknown="ignore"), ["subject"])
 ])
 
 model = Pipeline(steps=[
