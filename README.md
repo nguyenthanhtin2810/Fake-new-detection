@@ -15,7 +15,7 @@ You can find at **train.py** and the trained model is at **trained model.pkl**
 
 ## Evaluation
 ### Confunsion Matrix
-<img src="confunsion_matrix.jpg" width="400" height="400">
+<img src="confusion_matrix.jpg" width="400" height="400">
 
 ## Requirements
 * python
