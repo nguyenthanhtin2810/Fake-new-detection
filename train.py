@@ -14,7 +14,7 @@ import pickle
 
 # Read CSV files
 df1 = pd.read_csv("data/Fake.csv", dtype=str)
-df2 = pd.read_csv("data/True.csv", dtype=str, encoding='latin1')
+df2 = pd.read_csv("data/True.csv", dtype=str)
 # Add a label
 df1["label"] = ["Fake" for _ in range(df1.shape[0])]
 df2["label"] = ["True" for _ in range(df2.shape[0])]
@@ -52,12 +52,12 @@ plt.figure(figsize=(6, 4))
 sn.heatmap(confusion, annot=True, cmap='Blues', linecolor='black', linewidths=1, fmt='d')
 plt.xlabel('Predicted')
 plt.ylabel('Actual')
-# plt.show()
+plt.show()
 
-plt.savefig("confusion_matrix.jpg")
+# plt.savefig("confusion_matrix.jpg")
 
-with open('trained_model.pkl', 'wb') as model_file:
-    pickle.dump(model, model_file)
+# with open('trained_model.pkl', 'wb') as model_file:
+#     pickle.dump(model, model_file)
 
 
 
