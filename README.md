@@ -24,6 +24,11 @@ You can find at **train.py** and the trained model is at **trained model.pkl**
 ### Confunsion Matrix
 <img src="confusion_matrix.jpg" width="600" height="400">
 
+## Testing
+I tested the trained model through data taken from another dataset.
+
+You can find at **test.py**.
+
 ## Requirements
 * python
 * pandas
